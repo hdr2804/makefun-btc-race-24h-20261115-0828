@@ -29,10 +29,12 @@ is charged:
 ## Dev-window result
 
 On the competition's frozen dev window (BTC −4.0% over the 24 h,
-buy-and-hold fails the dev gate), a fill-exact simulation of the
-harness's own fee/slippage/impact model gives:
+buy-and-hold fails the dev gate), the kit's own BarsEngine (the
+server's bigint fill model: 4 bps fee, 2 bps slippage, constant-
+product impact against each bar's pool depth) grades this bot at:
 
-- Net PnL **+$23.00** on the $1,000 paper start (dev gate: > $0)
+- Net PnL **+$22.99** on the $1,000 paper start (dev gate: > $0),
+  identical across two executions
 - 15 fills, 5 round trips, 5 of 5 profitable, max drawdown ~2%
 - Positive on each half of the window traded standalone
   (+$4.16 / +$17.90); parameters sit on a plateau, not a spike
